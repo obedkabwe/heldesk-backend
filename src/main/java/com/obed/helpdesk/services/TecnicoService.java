@@ -1,6 +1,7 @@
 package com.obed.helpdesk.services;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.hibernate.ObjectNotFoundException;
@@ -22,7 +23,9 @@ public class TecnicoService {
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto noa encontrado: " + id, null));
 	}		
 		
-	
+	public List<Tecnico> findAll(){
+		return repository.findAll();
+	}
 	
 	
 	
