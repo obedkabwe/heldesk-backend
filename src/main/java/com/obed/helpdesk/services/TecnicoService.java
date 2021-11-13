@@ -3,10 +3,11 @@ package com.obed.helpdesk.services;
 
 import java.util.Optional;
 
+import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+ 
 import com.obed.helpdesk.domain.Tecnico;
 import com.obed.helpdesk.repositories.TecnicoRepository;
 
@@ -18,10 +19,10 @@ public class TecnicoService {
 	
 	public Tecnico findById(Integer id) {
 		Optional<Tecnico> obj = repository.findById(id);
-		return obj.orElse(null);
-				
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto noa encontrado: " + id, null));
+	}		
 		
-	}
+	
 	
 	
 	
