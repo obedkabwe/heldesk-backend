@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.obed.helpdesk.domain.Tecnico;
 import com.obed.helpdesk.domain.enums.Perfil;
@@ -17,9 +19,13 @@ public class TecnicoDTO implements Serializable {
 
     
   	protected Integer id;
+  	@NotNull(message = "O campo NOME e requerido")
   	protected String nome;
+  	@NotNull(message = "O campo CPF e requerido")
   	protected String cpf;
+  	@NotNull(message = "O campo EMAIL e requerido")
   	protected String email;
+  	@NotNull(message = "O campo SENHA e requerido")
   	protected String senha;
   	
   	protected Set<Integer> perfis = new HashSet<>();
@@ -29,20 +35,21 @@ public class TecnicoDTO implements Serializable {
 	
   	public TecnicoDTO() {
 		super();
-		
+		addPerfil(Perfil.CLIENTE);
 	}
 	
 	
   	public TecnicoDTO(Tecnico obj) {
 		super();
 		this.id = obj.getId();
-		this.nome = obj.getNome();
+		this.nome = obj.getNome(); 
 		this.cpf = obj.getCpf();
 		this.email = obj.getEmail();
 		this.senha = obj.getSenha();
 		this.perfis = obj.getPerfis().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
 		this.dataCriacao = obj.getDataCriacao();
-	}
+		addPerfil(Perfil.CLIENTE);
+  	}
 
 
 	public Integer getId() {
