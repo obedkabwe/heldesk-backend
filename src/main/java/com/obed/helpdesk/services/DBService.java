@@ -31,17 +31,17 @@ public class DBService {
 		Tecnico tec1 = new Tecnico(null, "obed kabwe", "3947547543 ","kabwe@gmail.com", "123");
 		tec1.addPerfil(Perfil.ADMIN);
 		
-		Tecnico tec2 = new Tecnico(null, "Richard Stallman", "903.347.070-56", "stallman@mail.com", ("123"));
-		Tecnico tec3 = new Tecnico(null, "Claude Elwood Shannon", "271.068.470-54", "shannon@mail.com", ("123"));
-		Tecnico tec4 = new Tecnico(null, "Tim Berners-Lee", "162.720.120-39", "lee@mail.com", ("123"));
-		Tecnico tec5 = new Tecnico(null, "Linus Torvalds", "778.556.170-27", "linus@mail.com", ("123"));
+		Tecnico tec2 = new Tecnico(null, "Richard Stallman", "283.278.380-59", "stallman@mail.com", ("123"));
+		Tecnico tec3 = new Tecnico(null, "Claude Elwood Shannon", "378.034.970-12", "shannon@mail.com", ("123"));
+		Tecnico tec4 = new Tecnico(null, "Tim Berners-Lee", "573.335.340-65", "lee@mail.com", ("123"));
+		Tecnico tec5 = new Tecnico(null, "Linus Torvalds", "663.998.200-57", "linus@mail.com", ("123"));
 		
 		
-		Cliente cli1 = new Cliente(null, "nathan ngoya", "38644383", "oberson@gmail.com", "123");
-		Cliente cli2 = new Cliente(null, "Marie Curie", "322.429.140-06", "curie@mail.com", ("123"));
-		Cliente cli3 = new Cliente(null, "Charles Darwin", "792.043.830-62", "darwin@mail.com", ("123"));
-		Cliente cli4 = new Cliente(null, "Stephen Hawking", "177.409.680-30", "hawking@mail.com", ("123"));
-		Cliente cli5 = new Cliente(null, "Max Planck", "081.399.300-83", "planck@mail.com", ("123"));
+		Cliente cli1 = new Cliente(null, "nathan ngoya", "419.307.360-29", "oberson@gmail.com", "123");
+		Cliente cli2 = new Cliente(null, "Marie Curie", "040.152.330-69", "curie@mail.com", ("123"));
+		Cliente cli3 = new Cliente(null, "Charles Darwin", "515.779.820-29", "darwin@mail.com", ("123"));
+		Cliente cli4 = new Cliente(null, "Stephen Hawking", "792.553.610-15", "hawking@mail.com", ("123"));
+		Cliente cli5 = new Cliente(null, "Max Planck", "208.308.480-29", "planck@mail.com", ("123"));
 		
 		
 		Chamado c1 = new Chamado(null,Prioridade.MEDIA,Status.ANDAMENTO,"Chamado 1" , "Primeiro chamada", cli1, tec1);

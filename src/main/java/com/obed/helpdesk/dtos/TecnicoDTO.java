@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotNull;
 
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.obed.helpdesk.domain.Tecnico;
 import com.obed.helpdesk.enums.Perfil;
@@ -22,6 +23,7 @@ public class TecnicoDTO implements Serializable {
   	@NotNull(message = "O campo NOME e requerido")
   	protected String nome;
   	@NotNull(message = "O campo CPF e requerido")
+
   	protected String cpf;
   	@NotNull(message = "O campo EMAIL e requerido")
   	protected String email;
