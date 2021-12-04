@@ -17,7 +17,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.obed.helpdesk.domain.enums.Perfil;
+import com.obed.helpdesk.enums.Perfil;
 
 @Entity
 public abstract class Pessoa implements Serializable {

@@ -1,4 +1,4 @@
-package com.obed.helpdesk.resources.exceptions;
+package helpdesk.exceptions;
 
 import java.io.Serializable;
 

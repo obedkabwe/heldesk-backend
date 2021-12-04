@@ -13,8 +13,8 @@ import javax.persistence.ManyToOne;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.obed.helpdesk.domain.enums.Prioridade;
-import com.obed.helpdesk.domain.enums.Status;
+import com.obed.helpdesk.enums.Prioridade;
+import com.obed.helpdesk.enums.Status;
 
 @Entity
 public class Chamado implements Serializable {

@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.obed.helpdesk.domain.Tecnico;
-import com.obed.helpdesk.domain.enums.Perfil;
+import com.obed.helpdesk.enums.Perfil;
 
 
 

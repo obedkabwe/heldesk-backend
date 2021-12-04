@@ -1,4 +1,4 @@
-package com.obed.helpdesk.domain.enums;
+package com.obed.helpdesk.enums;
 
 public enum Prioridade {
 BAIXA(0, "ROLE_BAIXA"),
