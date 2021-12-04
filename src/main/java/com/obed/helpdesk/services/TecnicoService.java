@@ -4,6 +4,8 @@ package com.obed.helpdesk.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -39,6 +41,18 @@ public class TecnicoService {
 		Tecnico newObj = new Tecnico(objDTO);
 		return repository.save(newObj);
 	}
+	
+	
+	public Tecnico update(Integer id, @Valid TecnicoDTO objDTO) {
+		objDTO.setId(id);
+		Tecnico oldObj = findById(id);
+		validaPorCpfEmail(objDTO);
+		oldObj = new Tecnico(objDTO);
+		return repository.save(oldObj);
+	
+	}
+	
+	
 
 	private void validaPorCpfEmail(TecnicoDTO objDTO) {
 		Optional<Pessoa> obj = pessoaRepository.findByCpf(objDTO.getCpf());
@@ -54,7 +68,7 @@ public class TecnicoService {
 	
 	
 	}
-	
+
 	
 	
 	
