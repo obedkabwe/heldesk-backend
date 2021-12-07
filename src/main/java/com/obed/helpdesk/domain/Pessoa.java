@@ -16,7 +16,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.hibernate.validator.constraints.br.CPF;
+
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.obed.helpdesk.enums.Perfil;
