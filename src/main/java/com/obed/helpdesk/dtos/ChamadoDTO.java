@@ -3,6 +3,8 @@ package com.obed.helpdesk.dtos;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.obed.helpdesk.domain.Chamado;
 
@@ -16,11 +18,17 @@ public class ChamadoDTO implements Serializable{
     private LocalDate dataAbertura = LocalDate.now();
 	@JsonFormat(pattern = "dd/MM/yyy")
     private LocalDate dataFechamento =LocalDate.now();
+	@NotNull(message= "O campo PRIORIDADE esta requirido")
 	private Integer prioridade;
+	@NotNull(message= "O campo STATUS esta requirido")
 	private Integer status;
+	@NotNull(message= "O campo TITULO esta requirido")
 	private String titulo;
+	@NotNull(message= "O campo OBSERVACAOES esta requirido")
 	private String observacaoes;
+	@NotNull(message= "O campo TECNICO esta requirido")
 	private Integer tecnico;
+	@NotNull(message= "O campo CLIENTE esta requirido")
 	private Integer cliente;
 	private String nomeTecnico;
 	private String nomeCliente;
