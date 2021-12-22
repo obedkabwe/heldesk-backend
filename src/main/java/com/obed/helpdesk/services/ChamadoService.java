@@ -26,7 +26,9 @@ public class ChamadoService {
 	private TecnicoService tecnicoService;
 	@Autowired
 	private ClienteService clienteService;
-    public Chamado findById(Integer id) {
+   
+	
+	public Chamado findById(Integer id) {
     	Optional<Chamado> obj = repository.findById(id);
     	return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto nao foi encontrado! ID"  + id));
     }
